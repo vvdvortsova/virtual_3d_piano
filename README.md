@@ -1,6 +1,6 @@
-## Virtual 3D Piano
+# Virtual 3D Piano
 This program is a virtual piano. The application also contains the functionality of a MIDI synthesizer.
-## Info
+# Info
 Here is a [video](https://youtu.be/DNp6TcFBGdk) of the program in action.<br/>
 ![Piano](src/res/pianoView.png)
 # Download
