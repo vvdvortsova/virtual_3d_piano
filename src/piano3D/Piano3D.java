@@ -31,12 +31,10 @@ import javafx.scene.transform.Transform;
 import javafx.scene.transform.Translate;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.parallel.Resources;
+
 
 import javax.sound.midi.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
@@ -86,7 +84,7 @@ public class Piano3D extends Application implements MetaEventListener {
     /**
      * Names of MIDI instruments
      */
-    private String names[] = {
+    private final String names[] = {
             "Piano", "Chromatic Perc.", "Organ", "Guitar",
             "Bass", "Strings", "Ensemble", "Brass",
             "Reed", "Pipe", "Synth Lead", "Synth Pad",
@@ -132,7 +130,7 @@ public class Piano3D extends Application implements MetaEventListener {
     private Scene mainScene;
     private Label noteLabel;
 
-    private Button recordB, playB, saveB;// переменные нужны для записи звука
+    private Button recordB, playB, saveB;// for recording sound
     private Button btnSetStandartControls;
     private GridPane paneWithMainButtons;
     private GridPane paneWithComboBoxs;
@@ -167,11 +165,7 @@ public class Piano3D extends Application implements MetaEventListener {
         initMidiSystem();
         initKeysBoardOfPiano();
 
-        try {
-            sequence = new Sequence(Sequence.PPQ, 10);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        sequence = new Sequence(Sequence.PPQ, 10);
 
         groupPiano = new SmartGroup(hashMapWithKeys.get(KeyCode.HOME).getMeshView());
         createPiano();
@@ -529,7 +523,7 @@ public class Piano3D extends Application implements MetaEventListener {
                 , "Octave 3-6"
                 , "Octave 4-7"
         );
-        ComboBox<String> octavesComboBox = new ComboBox<String>(octaves);
+        ComboBox<String> octavesComboBox = new ComboBox<>(octaves);
 
 
         octavesComboBox.setValue("Octave 3-6"); // sets the selected item to default
@@ -677,6 +671,7 @@ public class Piano3D extends Application implements MetaEventListener {
 
         String lineFromSourceFile = "";
         String lineFromNameFile = "";
+
         BufferedReader readSource = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(fileSource)));
         BufferedReader readNames = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(fileKeyName)));
 

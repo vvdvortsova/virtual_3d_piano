@@ -1,10 +1,11 @@
 ## Virtual 3D Piano
 This program is a virtual piano. The application also contains the functionality of a MIDI synthesizer.
 ## Info
-Here is a [video](https://youtu.be/DNp6TcFBGdk) of the program in action<br/>
-![Piano](src/images/pianoView.png)
+Here is a [video](https://youtu.be/DNp6TcFBGdk) of the program in action.<br/>
+![Piano](src/res/pianoView.png)
 # Download
-Here is a [.jar](https://drive.google.com/file/d/1ejdHIaajP7dllBXU7ieOBCYL51Dw18A8/view?usp=sharing) file with run files .sh and .cmd
+Here is a [.jar](https://drive.google.com/file/d/1ejdHIaajP7dllBXU7ieOBCYL51Dw18A8/view?usp=sharing) file with run files .sh and .cmd<br/>
+Also you need to download [JavaFx](https://gluonhq.com/products/javafx/).
 # Run
 To run the .jar do not forget to write VM OPTIONS<br/>
 ``` bash
@@ -44,9 +45,10 @@ If you want to add keys in virtual piano you can add it in source.txt<br/>
     - piano3D/
 - Custom shapes
     - customShapes/
-- Sources    
-    - source.txt offset valueOctave x y z
-    - name_of_keys.txt keyName type nameOfCode
+- Sources   
+    - res/ 
+        - source.txt  with structure ```offset valueOctave x y z ```
+        - name_of_keys.txt  with structure ```keyName type nameOfCode ```
 
 # Documentation
 Generate JavaDoc and watch documentation here
