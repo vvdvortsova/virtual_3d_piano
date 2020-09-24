@@ -3,6 +3,25 @@ This program is a virtual piano. The application also contains the functionality
 # Info
 Here is a [video](https://youtu.be/DNp6TcFBGdk) of the program in action.<br/>
 ![Piano](src/res/pianoView.png)
+#Features
+- Virtual piano keyboard, consisting of 4 octaves
+
+    - Possibility of pressing the keyboard of the virtual piano using the keyboard of a personal computer
+    - When you press a key on the PC keyboard, the corresponding note should sound, and at the same time the pressing of the corresponding key should be visualized in 3D
+    - When you release a computer key, the corresponding virtual piano key should return to its original position
+    - Ability to simultaneously press multiple keys to play chords
+    - When you press the key again, the note of which is still playing, you must stop the sounding of the note and start playback from the beginning
+    
+    - Ability to move the piano keyboard in a 3D scene using a touchpad or computer mouse
+    - Possibility to switch octaves from 1 to 5, from 2 to 6, from 3 to 7, from 4 to 8
+    - Ability to rotate the keyboard about the OX and OY axes, zoom in and out along the OZ axis
+    - Ability to adjust pressure-pressure on a key, key-down velosity-speed of pressing a key, shift the pitch up or down, the duration of the sounding of notes
+    - Ability to select one channel from MIDI channels
+    - Ability to select one MIDI instrument from the available MIDI synthesizer instruments
+    - Ability to customize the current MIDI channel
+    - Ability to simultaneously turn off the sound of all notes for the current MIDI channel
+    - Ability to press the piano keyboard using a touchpad or computer mouse
+        - Recordings of a sequence of MIDI messages in MIDI format    
 # Download
 Here is a [.jar](https://drive.google.com/file/d/1ejdHIaajP7dllBXU7ieOBCYL51Dw18A8/view?usp=sharing) file with run files .sh and .cmd<br/>
 Also you need to download [JavaFx](https://gluonhq.com/products/javafx/).
